@@ -1,51 +1,80 @@
 package Math;
 
+import java.util.Scanner;
+
 public class EquacaoSegundoGrau {
 	private double a, b, c, d;
+	private Scanner scanner;
 	
-	public EquacaoSegundoGrau (double a, double b, double c) {
-		this.a = a;
-		this.b = b;
-		this.c = c;
-	}
+	//receber valores de a,b,c
+	public EquacaoSegundoGrau () 
+	{
+		scanner = new Scanner(System.in);
+		
+		System.out.println("aX²+bX+c");
+		
+		System.out.print("a:");
+		this.a = scanner.nextDouble();
+		
+		System.out.print("b:");
+		this.b = scanner.nextDouble();
+		
+		System.out.print("c:");
+		this.c = scanner.nextDouble();
 	
-	public EquacaoSegundoGrau (double a, double b) {
-		this.a = a;
-		this.b = b;
-		this.c = 0;
-	}
-	
-	public double getA() {
-		return a;
-	}
-	
-	public double getB() {
-		return b;
-	}
 
-	public double getC() {
-		return c;
-	}
-	
-	public double[] resolveEquacao () {
-		if (a == 0) throw new IllegalArgumentException("O termo a nao pode ser igual a zero.");
-		
-		double d = Math.pow(b, 2) - 4*a*c;
-		double [] resp = new double[2];
-		
-		if (d >= 0) {	
-			resp[0] = (-b + Math.sqrt(d))/(2*a);
-			resp[1] = (-b - Math.sqrt(d))/(2*a);
-		} else {
-			System.out.println("Nao existem raizes reais. ");
+		//verificar se o valor eh zero
+		if (a == 0)
+		{
+			System.out.println("a nao pode ser igual a zero");
+		}
+		else
+		{
+			
+		//imprimir a equacao em causa
+		System.out.print(a + "X²");
+		if (b != 0)
+		{
+			if (b > 0)
+			{
+				System.out.print("+" + b + "X");
+			}
+			else
+			{
+				System.out.print(b + "X");
+			}
 		}
 		
+		if  (c !=0)
+		{
+			if (c > 0)
+			{
+				System.out.println("+" + c);
+			}
+			else
+			{
+				System.out.println(c);
+			}
+		}
 		
-		return resp;
-	}
-	
-	public String toString() {
-		if (d >= 0) return "x1 = " +  resolveEquacao()[0] + " | x2 = " + resolveEquacao()[1];
-		return "Nao existem raizes reais.";
+		//imprimir delta Δ
+		double d = Math.pow(b, 2) - 4*a*c;
+		 System.out.println("Δ = b² - 4 * a * c");
+		 System.out.println("Δ = " + b + "² - 4 * " + a + " * " + c);
+		 System.out.println("Δ = " + d);
+		
+		if (d >= 0) {
+			//imprimir formula de bhaskara
+			System.out.println("X = (-b ± √Δ)/2 * a ");
+			
+			//resuldado
+			System.out.println("X = (-" + b + " ± √" + d + ")/2 * " + a);
+			System.out.println("X1 = " + (-b + Math.sqrt(d))/(2*a));
+			System.out.println("X2 = " + (-b - Math.sqrt(d))/(2*a));
+			
+		} else {
+			System.out.println("Nao tem raizes reais.");
+		}
+		}
 	}
 }
