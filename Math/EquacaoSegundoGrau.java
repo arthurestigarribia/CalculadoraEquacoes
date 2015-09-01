@@ -23,7 +23,7 @@ public class EquacaoSegundoGrau {
 		this.c = scanner.nextDouble();
 	
 
-		//verificar se o valor eh zero
+		//verificar se o valor de a eh zero
 		if (a == 0)
 		{
 			System.out.println("a nao pode ser igual a zero");
