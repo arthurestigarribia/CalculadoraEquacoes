@@ -1,16 +1,12 @@
 package Math;
 
-public class EquacaoPrimeiroGrau implements IEquacao {
-	private double a, b;
+public class EquacaoPrimeiroGrau {
+	private double a;
+	private double b;
 	
 	public EquacaoPrimeiroGrau (double a, double b) {
 		this.a = a;
 		this.b = b;
-	}
-	
-	public EquacaoPrimeiroGrau (double a) {
-		this.a = a;
-		this.b = 0;
 	}
 
 	public double getA() {
@@ -21,12 +17,13 @@ public class EquacaoPrimeiroGrau implements IEquacao {
 		return b;
 	}
 	
-	public double resolveEquacao () {
-		if (a == 0) throw new IllegalArgumentException("Impossivel dividir por zero.");
-		return -b/a;
+	public String toString () {
+		if (b >= 0) return a + "x + " + b + " = 0";
+		return a + "x - " + -b + " = 0";
 	}
 	
-	public String toString () {
-		return "x = " + resolveEquacao();
+	public String resolveEquacao () throws DivisaoPorZeroException {
+		if (a == 0) throw new DivisaoPorZeroException("Impossivel dividir por zero.");
+		return "x = " + -b/a;
 	}
 }

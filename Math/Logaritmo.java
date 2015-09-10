@@ -1,42 +1,39 @@
 package Math;
 
-public class Logaritmo implements IEquacao {
+public class Logaritmo {
 	private double base;
 	private double logaritmando;
 	private double logaritmo;
 	private double resultado;
+	private String incognita;
 	
-	public Logaritmo (double base, double logaritmando, char c) {
-		if (base <= 0 || base == 1) throw new IllegalArgumentException("Nao existe logaritmo com base 0 nem 1.");
-		if (logaritmando <= 0) throw new IllegalArgumentException("Nao existe logaritmo com logaritmando negativo nem zero.");
-		
+	public Logaritmo (double base, double logaritmando, String logaritmo) {
 		this.base = base;
 		this.logaritmando = logaritmando;
 		this.logaritmo = Math.log(logaritmando)/Math.log(base);
 		
-		resultado = logaritmo;
+		this.resultado = this.logaritmo;
+		this.incognita = logaritmo;
 	}
 	
-	public Logaritmo (double base, char c, double logaritmo) {
-		if (base <= 0 || base == 1) throw new IllegalArgumentException("Nao existe logaritmo com base 0 nem 1.");
-		
+	public Logaritmo (double base, String logaritmando, double logaritmo) {
 		this.base = base;
 		this.logaritmando = Math.pow(base, logaritmo);
 		this.logaritmo = logaritmo;
 		
-		resultado = logaritmando;
+		this.resultado = this.logaritmando;
+		this.incognita = logaritmando;
 	}
 	
-	public Logaritmo (char c, double logaritmando, double logaritmo) {
-		if (logaritmando <= 0) throw new IllegalArgumentException("Nao existe logaritmo com logaritmando negativo nem zero.");
-		
-		this.base = Math.pow(logaritmo, 1/logaritmando);
+	public Logaritmo (String base, double logaritmando, double logaritmo) {
+		this.base = Math.pow(logaritmando, 1/logaritmo);
 		this.logaritmando = logaritmando;
 		this.logaritmo = logaritmo;
 		
-		resultado = base;
+		this.resultado = this.base;
+		this.incognita = base;
 	}
-
+	
 	public double getBase() {
 		return base;
 	}
@@ -61,11 +58,7 @@ public class Logaritmo implements IEquacao {
 		this.logaritmo = logaritmo;
 	}
 	
-	public double resolveEquacao() {
-		return resultado;
-	}
-	
-	public String toString () {
-		return "x = " + resolveEquacao();
+	public String resolveEquacao () {
+		return incognita + " = " + resultado;
 	}
 }

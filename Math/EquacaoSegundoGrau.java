@@ -1,8 +1,10 @@
 package Math;
 
 public class EquacaoSegundoGrau {
-	private double a, b, c, d;
-	
+	private double a;
+	private double b;
+	private double c;
+
 	public EquacaoSegundoGrau (double a, double b, double c) {
 		this.a = a;
 		this.b = b;
@@ -12,7 +14,6 @@ public class EquacaoSegundoGrau {
 	public EquacaoSegundoGrau (double a, double b) {
 		this.a = a;
 		this.b = b;
-		this.c = 0;
 	}
 	
 	public double getA() {
@@ -27,8 +28,15 @@ public class EquacaoSegundoGrau {
 		return c;
 	}
 	
-	public double[] resolveEquacao () {
-		if (a == 0) throw new IllegalArgumentException("O termo a nao pode ser igual a zero.");
+	public String toString () {
+		if (b >= 0 && c >= 0) return a + "x^2 + " + b + "x + " + c + " = 0";
+		if (b >= 0 && c <= 0) return a + "x^2 + " + b + "x - " + -c + " = 0";
+		if (b <= 0 && c >= 0) return a + "x^2 - " + -b + "x + " + c + " = 0";
+		return a + "x^2 - " + -b + "x - " + -c + " = 0";
+	}
+	
+	public String resolveEquacao () throws DivisaoPorZeroException {
+		if (a == 0) throw new DivisaoPorZeroException("O termo a nao pode ser igual a zero.");
 		
 		double d = Math.pow(b, 2) - 4*a*c;
 		double [] resp = new double[2];
@@ -41,11 +49,6 @@ public class EquacaoSegundoGrau {
 		}
 		
 		
-		return resp;
-	}
-	
-	public String toString() {
-		if (d >= 0) return "x1 = " +  resolveEquacao()[0] + " | x2 = " + resolveEquacao()[1];
-		return "Nao existem raizes reais.";
+		return "x1 = " + resp[0] + " | x2 = " + resp[1];
 	}
 }

@@ -6,9 +6,8 @@ package Math;
  */
 public interface IEquacao {
 	
-	
 	/**
 	 * @return Retorna as respostas da equação.
 	 */
-	public double resolveEquacao();
+	public String resolveEquacao();
 }

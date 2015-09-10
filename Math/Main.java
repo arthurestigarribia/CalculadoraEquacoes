@@ -1,23 +1,23 @@
 package Math;
 
 public class Main {
-	public static void main(String[] args) {
-		EquacaoPrimeiroGrau eq1 = new EquacaoPrimeiroGrau(2, 12);
-		System.out.println(eq1);
+	public static void main(String[] args) throws DivisaoPorZeroException {
+		EquacaoPrimeiroGrau eq1 = new EquacaoPrimeiroGrau(2.0, 12.0);
+		System.out.println(eq1.resolveEquacao());
 		
-		EquacaoSegundoGrau eq2 = new EquacaoSegundoGrau(1, -6, 8);
-		System.out.println(eq2);
+		EquacaoSegundoGrau eq2 = new EquacaoSegundoGrau(1.0, -6.0, 8.0);
+		System.out.println(eq2.resolveEquacao());
 		
-		RegraDeTres eq3 = new RegraDeTres('a', 2, 5, 8);
-		System.out.println(eq3);
+		RegraDeTres eq3 = new RegraDeTres("a", 2, 5, 8);
+		System.out.println(eq3.resolveEquacao());
 		
-		Exponencial eq4 = new Exponencial(2, 'x', 8);
-		System.out.println(eq4);
+		Exponencial eq4 = new Exponencial(2, 8);
+		System.out.println(eq4.resolveEquacao());
 		
-		Pitagoras eq5 = new Pitagoras ('x', 3, 4);
-		System.out.println(eq5);
+		Pitagoras eq5 = new Pitagoras ("x", 3, 4);
+		System.out.println(eq5.resolveEquacao());
 		
-		Logaritmo eq6 = new Logaritmo(2, 8,'x');
-		System.out.println(eq6);
+		Logaritmo eq6 = new Logaritmo(2, 8, "x");
+		System.out.println(eq6.resolveEquacao());
 	}
 }
