@@ -1,6 +1,6 @@
 package Math;
 
-public class EquacaoPrimeiroGrau {
+public class EquacaoPrimeiroGrau implements IEquacao {
 	private double a;
 	private double b;
 	

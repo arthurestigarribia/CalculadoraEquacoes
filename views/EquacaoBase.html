@@ -6,23 +6,23 @@
 		Calculadora de Equacoes do Arthur
 	</h1>
 	<p>
-		Digite alguns numeros (inteiro ou decimal, positivo ou negativo) e selecione o tipo de equacao:
+		Digite alguns numeros (inteiro ou decimal, positivo ou negativo):
 	</p>
-	<form action = "/EquacaoPrimeiroGrau" method = "post">
+	<form action = "/EquacaoBase" method = "post">
 		<p>
-		Equacao na forma ax + b = 0
+		Equacao na forma a^x = b
 		</p>
 		
 		<p>
 		Termo a:
 		</p>
-		<input type="text" name="PrimeiroNumero">
+		<input type="number" name="PrimeiroNumero">
 		<br>
 		
 		<p>
 		Termo b:
 		</p>
-		<input type="text" name="SegundoNumero">
+		<input type="number" name="SegundoNumero">
 		<br>
 		
 		<input type="submit" value="Calcular">

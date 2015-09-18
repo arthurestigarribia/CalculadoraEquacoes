@@ -1,48 +1,39 @@
 package Math;
 
 public class RegraDeTres {
-	private Fracao f1, f2;
 	private double resultado;
-	private String incognita;
+	private String incognita, str;
 	
 	public RegraDeTres (String a, double b, double c, double d) {	
-		f1.denominador = b;
-		f2.numerador = c;
-		f2.denominador = d;
-		
 		this.resultado = (b * c)/ d;
 		this.incognita = a;
+		
+		str = a + "/" + b + " = " + c + "/" + d;
 	}
 	
 	public RegraDeTres (double a, String b, double c, double d) {
-		f1.numerador = a;
-		f2.numerador = c;
-		f2.denominador = d;
-		
 		this.resultado = (a * d)/ c;
 		this.incognita = b;
+		
+		str = a + "/" + b + " = " + c + "/" + d;
 	}
 	
 	public RegraDeTres (double a, double b, String c, double d) {
-		f1.numerador = a;
-		f1.denominador = b;
-		f2.denominador = d;
-		
 		this.resultado = (a * d)/ b;
 		this.incognita = c;
+		
+		str = a + "/" + b + " = " + c + "/" + d;
 	}
 	
 	public RegraDeTres (double a, double b, double c, String d) {
-		f1.numerador = a;
-		f1.denominador = b;
-		f2.numerador = c;
-		
 		this.resultado = (b * c)/ a;
 		this.incognita = d;
+		
+		str = a + "/" + b + " = " + c + "/" + d;
 	}
 	
 	public String toString () {
-		return f1.numerador + "/" + f1.denominador + " = " + f2.numerador + "/" + f2.denominador;
+		return str;
 	}
 	
 	public String resolveEquacao () {

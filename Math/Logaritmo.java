@@ -1,6 +1,6 @@
 package Math;
 
-public class Logaritmo {
+public class Logaritmo implements IEquacao {
 	private double base;
 	private double logaritmando;
 	private double logaritmo;

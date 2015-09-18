@@ -13,59 +13,51 @@ public class RegraDeTresController implements TemplateViewRoute {
 		QueryParamsMap c = req.queryMap("TerceiroNumero");
 		QueryParamsMap d = req.queryMap("QuartoNumero");
 		
-		RegraDeTres eq = null;
-		boolean e = true;
-		
-		System.out.println(!ehUmNumero(a));
-		System.out.println(!ehUmNumero(b));
-		System.out.println(!ehUmNumero(c));
-		System.out.println(!ehUmNumero(d));
-		
 		if (!ehUmNumero(a)) {
-			double bb = b.doubleValue();
-			double cc = c.doubleValue();
-			double dd = d.doubleValue();
+			RegraDeTres eq = new RegraDeTres(a.value(), b.doubleValue(), c.doubleValue(), d.doubleValue());
 			
-			eq = new RegraDeTres(a.toString(), bb, cc, dd);
+			HashMap mapa = new HashMap();
 			
-			e = false;
+			mapa.put("equacao", eq.toString());
+			mapa.put("resultado", eq.resolveEquacao());
+			
+			return new ModelAndView(mapa, "RegraDeTres.html");
 		}
-
+		
 		if (!ehUmNumero(b)) {
-			double aa = a.doubleValue();
-			double cc = c.doubleValue();
-			double dd = d.doubleValue();
+			RegraDeTres eq = new RegraDeTres(a.doubleValue(), b.value(), c.doubleValue(), d.doubleValue());
 			
-			eq = new RegraDeTres(aa, b.toString(), cc, dd);
+			HashMap mapa = new HashMap();
 			
-			e = false;
+			mapa.put("equacao", eq.toString());
+			mapa.put("resultado", eq.resolveEquacao());
+			
+			return new ModelAndView(mapa, "RegraDeTres.html");
 		}
 		
 		if (!ehUmNumero(c)) {
-			double aa = a.doubleValue();
-			double bb = b.doubleValue();
-			double dd = d.doubleValue();
+			RegraDeTres eq = new RegraDeTres(a.doubleValue(), b.doubleValue(), c.value(), d.doubleValue());
 			
-			eq = new RegraDeTres(aa, bb, c.toString(), dd);
+			HashMap mapa = new HashMap();
 			
-			e = false;
+			mapa.put("equacao", eq.toString());
+			mapa.put("resultado", eq.resolveEquacao());
+			
+			return new ModelAndView(mapa, "RegraDeTres.html");
 		}
 		
-		double aa = a.doubleValue();
-		double bb = b.doubleValue();
-		double cc = c.doubleValue();
-		
-		if (e) {
-			e = false;
-			eq = new RegraDeTres(aa, bb, cc, d.toString());
+		if (!ehUmNumero(d)) {
+			RegraDeTres eq = new RegraDeTres(a.doubleValue(), b.doubleValue(), c.doubleValue(), d.value());
+			
+			HashMap mapa = new HashMap();
+			
+			mapa.put("equacao", eq.toString());
+			mapa.put("resultado", eq.resolveEquacao());
+			
+			return new ModelAndView(mapa, "RegraDeTres.html");
 		}
 		
-		HashMap mapa = new HashMap();
-		
-		mapa.put("equacao", eq.toString());
-		mapa.put("resultado", eq.resolveEquacao());
-		
-		return new ModelAndView(mapa, "RegraDeTres.html");
+		return null;
 	}
 	
 	private static boolean ehUmNumero (QueryParamsMap a) {
@@ -73,7 +65,9 @@ public class RegraDeTresController implements TemplateViewRoute {
 		
 		System.out.println(a.value());
 		
-		for (int i = 0; i < numero2.length; i++) {
+		if (numero2[0] < 48 || numero2[0] > 57 || numero2[0] != 50) return false;
+		
+		for (int i = 1; i < numero2.length; i++) {
 			if (numero2[i] < 48 || numero2[i] > 57 || numero2[i] != 45 || numero2[i] != 46) return false;
 		}
 		

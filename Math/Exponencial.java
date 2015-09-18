@@ -1,6 +1,6 @@
 package Math;
 
-public class Exponencial {
+public class Exponencial implements IEquacao {
 	private double base;
 	private double resultado;
 	
