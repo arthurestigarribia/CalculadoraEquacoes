@@ -1,0 +1,38 @@
+<html>
+	<title>
+		Calculadora de Equacoes do Arthur
+	</title>
+	<h1>
+		Calculadora de Equacoes do Arthur
+	</h1>
+	<p>
+		Digite alguns numeros (inteiro ou decimal, positivo ou negativo) e selecione o tipo de equacao:
+	</p>
+	<form action = "/EquacaoPrimeiroGrau" method = "post">
+		<p>
+		Equacao na forma ax + b = 0
+		</p>
+		
+		<p>
+		Termo a:
+		</p>
+		<input type="text" name="PrimeiroNumero">
+		<br>
+		
+		<p>
+		Termo b:
+		</p>
+		<input type="text" name="SegundoNumero">
+		<br>
+		
+		<input type="submit" value="Calcular">
+	</form>
+	
+	<p>
+		Resultado: 
+		<br>
+		{{equacaoPrimeiroGrau}}
+		<br>
+		{{resultado}}
+	</p>
+</html>

@@ -1,6 +1,7 @@
-package Math;
+package controller;
 
 import java.util.*;
+
 import Math.*;
 import spark.*;
 
@@ -14,7 +15,8 @@ public class ExponencialController implements TemplateViewRoute {
 		Exponencial eq = new Exponencial((double)a, (double)b);
 		
 		HashMap mapa = new HashMap();
-		mapa.put("resultado", eq.toString());
+		mapa.put("equacao", eq.toString());
+		mapa.put("resultado", eq.resolveEquacao());
 		
 		return new ModelAndView(mapa, "Exponencial.html");
 	}

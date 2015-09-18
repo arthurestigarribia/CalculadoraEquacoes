@@ -1,5 +1,6 @@
 package Math;
 
+import controller.EquacaoSegundoGrauController;
 import spark.*;
 import spark.template.mustache.MustacheTemplateEngine;
 

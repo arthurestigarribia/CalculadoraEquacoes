@@ -35,9 +35,9 @@ public class EquacaoSegundoGrau {
 		return a + "x^2 - " + -b + "x - " + -c + " = 0";
 	}
 	
-	public String resolveEquacao () throws DivisaoPorZeroException {
+	public String resolveEquacao () {
 		if (a == 0) throw new DivisaoPorZeroException("O termo a nao pode ser igual a zero.");
-		
+	
 		double d = Math.pow(b, 2) - 4*a*c;
 		double [] resp = new double[2];
 		

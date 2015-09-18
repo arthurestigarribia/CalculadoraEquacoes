@@ -1,4 +1,4 @@
-package Math;
+package controller;
 
 import java.util.HashMap;
 
@@ -16,7 +16,8 @@ public class EquacaoSegundoGrauController implements TemplateViewRoute {
 		EquacaoSegundoGrau eq = new EquacaoSegundoGrau(a, b, c);
 		
 		HashMap mapa = new HashMap();
-		mapa.put("resultado", eq.toString());
+		mapa.put("equacao", eq.toString());
+		mapa.put("resultado", eq.resolveEquacao());
 		
 		return new ModelAndView(mapa, "EquacaoSegundoGrau.html");
 	}

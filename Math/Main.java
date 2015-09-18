@@ -14,10 +14,10 @@ public class Main {
 		Exponencial eq4 = new Exponencial(2, 8);
 		System.out.println(eq4.resolveEquacao());
 		
-		Pitagoras eq5 = new Pitagoras ("x", 3, 4);
+		PitagorasHipotenusa eq5 = new PitagorasHipotenusa ("x", 3, 4);
 		System.out.println(eq5.resolveEquacao());
 		
-		Logaritmo eq6 = new Logaritmo(2, 8, "x");
+		Logaritmo eq6 = new Logaritmo(2, 8);
 		System.out.println(eq6.resolveEquacao());
 	}
 }

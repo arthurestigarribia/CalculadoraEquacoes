@@ -1,0 +1,51 @@
+<html>
+	<title>
+		Calculadora de Equacoes do Arthur
+	</title>
+	<h1>
+		Calculadora de Equacoes do Arthur
+	</h1>
+	<p>
+		Digite alguns numeros (inteiro ou decimal, positivo ou negativo) e selecione o tipo de equacao:
+	</p>
+	<form action = "/RegraDeTres" method = "post">
+		<p>
+		Equacao na forma a/b = c/d
+		</p>
+		
+		<p>
+		Termo a:
+		</p>
+		<input type="text" name="PrimeiroNumero">
+		<br>
+		
+		<p>
+		Termo b:
+		</p>
+		<input type="text" name="SegundoNumero">
+		<br>
+		
+		<p>
+		Termo c:
+		</p>
+		<input type="text" name="TerceiroNumero">
+		<br>
+		
+		
+		<p>
+		Termo d:
+		</p>
+		<input type="text" name="QuartoNumero">
+		<br>
+		
+		<input type="submit" value="Calcular">
+	</form>
+	
+	<p>
+		Resultado: 
+		<br>
+		{{RegraDeTres}}
+		<br>
+		{{resultado}}
+	</p>
+</html>

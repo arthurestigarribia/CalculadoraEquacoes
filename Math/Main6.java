@@ -1,23 +1,23 @@
 package Math;
 
-import controller.ExponencialController;
+import controller.RegraDeTresController;
 import spark.*;
 import spark.template.mustache.MustacheTemplateEngine;
 
-public class Main3 {
+public class Main6 {
 	public static void main(String[] args) {
 		MustacheTemplateEngine engine = new MustacheTemplateEngine("views");
 		Spark.staticFileLocation("/pub2");
-		ExponencialController calc = new ExponencialController();
+		RegraDeTresController calc = new RegraDeTresController();
 		
 		//Entra na calculadora
-		Spark.post("/Exponencial", calc, engine);
+		Spark.post("/RegraDeTres", calc, engine);
 		
 		//Entra no resultado
-		Spark.get("/Exponencial", new TemplateViewRoute() {
+		Spark.get("/RegraDeTres", new TemplateViewRoute() {
 			@Override
 			public ModelAndView handle(Request req, Response resp) {
-				return new ModelAndView(null, "Exponencial.html");
+				return new ModelAndView(null, "RegraDeTres.html");
 			}
 		}, engine);
 	}

@@ -6,7 +6,6 @@ public class RegraDeTres {
 	private String incognita;
 	
 	public RegraDeTres (String a, double b, double c, double d) {	
-		f1.numerador = a;
 		f1.denominador = b;
 		f2.numerador = c;
 		f2.denominador = d;
@@ -17,7 +16,6 @@ public class RegraDeTres {
 	
 	public RegraDeTres (double a, String b, double c, double d) {
 		f1.numerador = a;
-		f1.denominador = b;
 		f2.numerador = c;
 		f2.denominador = d;
 		
@@ -28,7 +26,6 @@ public class RegraDeTres {
 	public RegraDeTres (double a, double b, String c, double d) {
 		f1.numerador = a;
 		f1.denominador = b;
-		f2.numerador = c;
 		f2.denominador = d;
 		
 		this.resultado = (a * d)/ b;
@@ -39,10 +36,13 @@ public class RegraDeTres {
 		f1.numerador = a;
 		f1.denominador = b;
 		f2.numerador = c;
-		f2.denominador = d;
 		
 		this.resultado = (b * c)/ a;
 		this.incognita = d;
+	}
+	
+	public String toString () {
+		return f1.numerador + "/" + f1.denominador + " = " + f2.numerador + "/" + f2.denominador;
 	}
 	
 	public String resolveEquacao () {

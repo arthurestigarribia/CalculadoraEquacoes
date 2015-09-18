@@ -1,25 +1,25 @@
 package Math;
 
 public class Fracao {
-	public Object numerador;
-	public Object denominador;
+	public double numerador;
+	public double denominador;
 	
-	public Fracao (Object a, Object b) {
-		if ((double)b == 0) throw new DivisaoPorZeroException("Impossivel dividir por zero.");
+	public Fracao (double a, double b) {
+		if (b == 0) throw new DivisaoPorZeroException("Impossivel dividir por zero.");
 		
 		numerador = a;
 		denominador = b;
 	}
 	
 	public double getResultado () {
-		return (double)numerador / (double)denominador;
+		return numerador / denominador;
 	}
 	
 	public double getQuociente () {
-		return (int)((double)numerador / (double)denominador);
+		return (int)(numerador / denominador);
 	}
 	
 	public double getResto () {
-		return (double)numerador % (double)denominador;
+		return numerador % denominador;
 	}
 }

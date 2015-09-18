@@ -1,5 +1,6 @@
 package Math;
 
+import controller.EquacaoPrimeiroGrauController;
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;

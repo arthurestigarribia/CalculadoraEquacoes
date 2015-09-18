@@ -22,7 +22,7 @@ public class EquacaoPrimeiroGrau {
 		return a + "x - " + -b + " = 0";
 	}
 	
-	public String resolveEquacao () throws DivisaoPorZeroException {
+	public String resolveEquacao () {
 		if (a == 0) throw new DivisaoPorZeroException("Impossivel dividir por zero.");
 		return "x = " + -b/a;
 	}

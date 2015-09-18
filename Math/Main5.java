@@ -1,24 +1,23 @@
-package mathFiles;
+package Math;
 
-import Math.EquacaoPrimeiroGrau;
+import controller.ExponencialController;
 import spark.*;
-import spark.TemplateViewRoute;
 import spark.template.mustache.MustacheTemplateEngine;
 
-public class Main3 {
+public class Main5 {
 	public static void main(String[] args) {
 		MustacheTemplateEngine engine = new MustacheTemplateEngine("views");
 		Spark.staticFileLocation("/pub2");
-		EquacaoSegundoGrauController calc = new EquacaoSegundoGrauController();
+		ExponencialController calc = new ExponencialController();
 		
 		//Entra na calculadora
-		Spark.post("/EquacaoSegundoGrau", calc, engine);
+		Spark.post("/Exponencial", calc, engine);
 		
 		//Entra no resultado
-		Spark.get("/EquacaoSegundoGrau", new TemplateViewRoute() {
+		Spark.get("/Exponencial", new TemplateViewRoute() {
 			@Override
 			public ModelAndView handle(Request req, Response resp) {
-				return new ModelAndView(null, "EquacaoSegundoGrau.html");
+				return new ModelAndView(null, "Exponencial.html");
 			}
 		}, engine);
 	}
