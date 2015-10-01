@@ -11,6 +11,10 @@ public class PitagorasCateto {
 		catetoOposto = co;
 	}
 	
+	public String toString () {
+		return hipotenusa + "^2 = x^2 + " + catetoOposto + "^2";
+	}
+	
 	public String resolveEquacao () {
 		return "x = " + catetoAdjacente;
 	}

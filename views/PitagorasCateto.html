@@ -6,29 +6,23 @@
 		Calculadora de Equacoes do Arthur
 	</h1>
 	<p>
-		Digite alguns numeros (inteiro ou decimal, positivo ou negativo) e selecione o tipo de equacao:
+		Digite alguns numeros positivos (inteiro ou decimal):
 	</p>
-	<form action = "/EquacaoSegundoGrau" method = "post">
+	<form action = "/PitagorasCateto" method = "post">
 		<p>
-		Equacao na forma ax^2 + bx + c = 0
+		Equacao na forma a^2 = x^2 + b^2
 		</p>
 		
 		<p>
 		Termo a:
 		</p>
-		<input type="text" name="PrimeiroNumero">
+		<input type="number" name="PrimeiroNumero">
 		<br>
 		
 		<p>
 		Termo b:
 		</p>
-		<input type="text" name="SegundoNumero">
-		<br>
-		
-		<p>
-		Termo c:
-		</p>
-		<input type="text" name="TerceiroNumero">
+		<input type="number" name="SegundoNumero">
 		<br>
 		
 		<input type="submit" value="Calcular">
