@@ -21,7 +21,7 @@ public class RegraDeTresController implements TemplateViewRoute {
 			mapa.put("equacao", eq.toString());
 			mapa.put("resultado", eq.resolveEquacao());
 			
-			return new ModelAndView(mapa, "RegraDeTres.html");
+			return new ModelAndView(mapa, "Resultado.html");
 		}
 		
 		if (!ehUmNumero(b)) {
@@ -32,7 +32,7 @@ public class RegraDeTresController implements TemplateViewRoute {
 			mapa.put("equacao", eq.toString());
 			mapa.put("resultado", eq.resolveEquacao());
 			
-			return new ModelAndView(mapa, "RegraDeTres.html");
+			return new ModelAndView(mapa, "Resultado.html");
 		}
 		
 		if (!ehUmNumero(c)) {
@@ -43,7 +43,7 @@ public class RegraDeTresController implements TemplateViewRoute {
 			mapa.put("equacao", eq.toString());
 			mapa.put("resultado", eq.resolveEquacao());
 			
-			return new ModelAndView(mapa, "RegraDeTres.html");
+			return new ModelAndView(mapa, "Resultado.html");
 		}
 		
 		if (!ehUmNumero(d)) {
@@ -54,7 +54,7 @@ public class RegraDeTresController implements TemplateViewRoute {
 			mapa.put("equacao", eq.toString());
 			mapa.put("resultado", eq.resolveEquacao());
 			
-			return new ModelAndView(mapa, "RegraDeTres.html");
+			return new ModelAndView(mapa, "Resultado.html");
 		}
 		
 		return null;

@@ -5,7 +5,7 @@ public class EquacaoBase implements IEquacao {
 	private double potencia;
 	
 	public EquacaoBase (double expoente, double potencia) {
-		if (expoente == 0) throw new NumberFormatException();
+		if (expoente == 0) throw new NaoExistemRaizesException("O expoente nao pode ser igual a zero.");
 		
 		this.expoente = expoente;
 		this.potencia = potencia;
@@ -15,6 +15,8 @@ public class EquacaoBase implements IEquacao {
 	public String resolveEquacao() {
 		double resp = Math.pow(potencia, 1/expoente);
 		
+		if (expoente % 2 == 0 && potencia >= 0) return "x1 = " + resp + " | x2 = " + -resp;
+		if (expoente % 2 == 0 && potencia < 0) return "Nao existem raizes reais.";
 		return "x = " + resp;
 	}
 	

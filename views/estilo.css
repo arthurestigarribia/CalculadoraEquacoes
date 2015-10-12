@@ -1,0 +1,11 @@
+.negrito {
+	font-weight: bold;
+}
+
+label {
+	display: block;
+}
+
+input:focus {
+	border: 1px solid orange;
+}

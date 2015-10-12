@@ -19,6 +19,6 @@ public class LogaritmoController implements TemplateViewRoute {
 		mapa.put("equacao", eq.toString());
 		mapa.put("resultado", eq.resolveEquacao());
 		
-		return new ModelAndView(mapa, "Logaritmo.html");
+		return new ModelAndView(mapa, "Resultado.html");
 	}
 }

@@ -16,6 +16,7 @@ public class PitagorasHipotenusa {
 	}
 	
 	public String resolveEquacao () {
+		if ((catetoAdjacente * catetoAdjacente + catetoOposto * catetoOposto) < 0) throw new NaoExistemRaizesException("Nao existem raizes reais.");
 		return "x = " + hipotenusa;
 	}
 }

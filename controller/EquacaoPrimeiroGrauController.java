@@ -18,6 +18,6 @@ public class EquacaoPrimeiroGrauController implements TemplateViewRoute {
 		mapa.put("equacao", eq.toString());
 		mapa.put("resultado", eq.resolveEquacao());
 		
-		return new ModelAndView(mapa, "EquacaoPrimeiroGrau.html");
+		return new ModelAndView(mapa, "Resultado.html");
 	}	
 }

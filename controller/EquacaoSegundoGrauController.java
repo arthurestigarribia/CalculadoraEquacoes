@@ -14,11 +14,15 @@ public class EquacaoSegundoGrauController implements TemplateViewRoute {
 		double c = req.queryMap("TerceiroNumero").doubleValue();
 		
 		EquacaoSegundoGrau eq = new EquacaoSegundoGrau(a, b, c);
-		
-		HashMap mapa = new HashMap();
-		mapa.put("equacao", eq.toString());
-		mapa.put("resultado", eq.resolveEquacao());
-		
-		return new ModelAndView(mapa, "EquacaoSegundoGrau.html");
+	
+		try {
+			HashMap mapa = new HashMap();
+			mapa.put("equacao", eq.toString());
+			mapa.put("resultado", eq.resolveEquacao());
+			
+			return new ModelAndView(mapa, "Resultado.html");
+		} catch (NaoExistemRaizesException e) {
+			return new ModelAndView(null, "NaoExistemRaizes.html");
+		}
 	}
 }

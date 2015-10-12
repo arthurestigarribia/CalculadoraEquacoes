@@ -1,13 +1,8 @@
 package controller;
 
-import java.util.HashMap;
-
-import Math.EquacaoBase;
-import Math.Logaritmo;
-import spark.ModelAndView;
-import spark.Request;
-import spark.Response;
-import spark.TemplateViewRoute;
+import java.util.*;
+import Math.*;
+import spark.*;
 
 public class EquacaoBaseController implements TemplateViewRoute {
 	public ModelAndView handle(Request req, Response resp) {
@@ -16,10 +11,14 @@ public class EquacaoBaseController implements TemplateViewRoute {
 		
 		EquacaoBase eq = new EquacaoBase (a, b);
 		
-		HashMap mapa = new HashMap();
-		mapa.put("equacao", eq.toString());
-		mapa.put("resultado", eq.resolveEquacao());
-		
-		return new ModelAndView(mapa, "EquacaoBase.html");
+		try {
+			HashMap mapa = new HashMap();
+			mapa.put("equacao", eq.toString());
+			mapa.put("resultado", eq.resolveEquacao());
+			
+			return new ModelAndView(mapa, "Resultado.html");
+		} catch (NaoExistemRaizesException e) {
+			return new ModelAndView(null, "NaoExistemRaizes.html");
+		}
 	}
 }

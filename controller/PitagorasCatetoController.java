@@ -3,6 +3,7 @@ package controller;
 import java.util.HashMap;
 
 import Math.Logaritmo;
+import Math.NaoExistemRaizesException;
 import Math.PitagorasCateto;
 import Math.PitagorasHipotenusa;
 import spark.ModelAndView;
@@ -17,10 +18,14 @@ public class PitagorasCatetoController implements TemplateViewRoute {
 		
 		PitagorasCateto eq = new PitagorasCateto (a, b);
 		
-		HashMap mapa = new HashMap();
-		mapa.put("equacao", eq.toString());
-		mapa.put("resultado", eq.resolveEquacao());
-		
-		return new ModelAndView(mapa, "PitagorasHipotenusa.html");
+		try {
+			HashMap mapa = new HashMap();
+			mapa.put("equacao", eq.toString());
+			mapa.put("resultado", eq.resolveEquacao());
+			
+			return new ModelAndView(mapa, "Resultado.html");
+		} catch (NaoExistemRaizesException e) {
+			return new ModelAndView(null, "NaoExistemRaizes.html");
+		}
 	}
 }

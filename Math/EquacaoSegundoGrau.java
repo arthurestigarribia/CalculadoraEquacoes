@@ -45,7 +45,7 @@ public class EquacaoSegundoGrau implements IEquacao {
 			resp[0] = (-b + Math.sqrt(d))/(2*a);
 			resp[1] = (-b - Math.sqrt(d))/(2*a);
 		} else {
-			System.out.println("Nao existem raizes reais. ");
+			throw new NaoExistemRaizesException("Nao existem raizes reais. ");
 		}
 		
 		

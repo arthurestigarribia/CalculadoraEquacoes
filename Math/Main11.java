@@ -1,14 +1,6 @@
 package Math;
 
-import controller.EquacaoBaseController;
-import controller.EquacaoPrimeiroGrauController;
-import controller.EquacaoSegundoGrauController;
-import controller.ExponencialController;
-import controller.HomeController;
-import controller.LogaritmoController;
-import controller.PitagorasCatetoController;
-import controller.PitagorasHipotenusaController;
-import controller.RegraDeTresController;
+import controller.*;
 import spark.*;
 import spark.template.mustache.MustacheTemplateEngine;
 
@@ -44,19 +36,6 @@ public class Main11 {
 			@Override
 			public ModelAndView handle(Request req, Response resp) {
 				return new ModelAndView(null, "EquacaoPrimeiroGrau.html");
-			}
-		}, engine);
-		
-		ExponencialController calc3 = new ExponencialController();
-		
-		//Entra na calculadora
-		Spark.post("/Exponencial", calc3, engine);
-		
-		//Entra no resultado
-		Spark.get("/Exponencial", new TemplateViewRoute() {
-			@Override
-			public ModelAndView handle(Request req, Response resp) {
-				return new ModelAndView(null, "Exponencial.html");
 			}
 		}, engine);
 		
@@ -135,6 +114,32 @@ public class Main11 {
 			@Override
 			public ModelAndView handle(Request req, Response resp) {
 				return new ModelAndView(null, "PitagorasHipotenusa.html");
+			}
+		}, engine);
+		
+		NaoExistemRaizesController calc10 = new NaoExistemRaizesController();
+		
+		//Entra na calculadora
+		Spark.post("/NaoExistemRaizes", calc10, engine);
+		
+		//Entra no resultado
+		Spark.get("/NaoExistemRaizes", new TemplateViewRoute() {
+			@Override
+			public ModelAndView handle(Request req, Response resp) {
+				return new ModelAndView(null, "NaoExistemRaizes.html");
+			}
+		}, engine);
+		
+		ResultadoController calc11 = new ResultadoController();
+		
+		//Entra na calculadora
+		Spark.post("/Resultado", calc10, engine);
+		
+		//Entra no resultado
+		Spark.get("/Resultado", new TemplateViewRoute() {
+			@Override
+			public ModelAndView handle(Request req, Response resp) {
+				return new ModelAndView(null, "Resultado.html");
 			}
 		}, engine);
 	}
