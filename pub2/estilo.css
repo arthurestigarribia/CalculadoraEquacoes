@@ -1,0 +1,36 @@
+.negrito {
+	font-weight: bold;
+}
+
+label {
+	display: block;
+}
+
+input:focus {
+	border: 1px solid black;
+}
+
+h1 {
+	font-family: Arial;
+	font-size: 18;
+	background-color: RGB(0, 150, 0);
+	color: RGB(255, 255, 255);
+}
+
+h2 {
+	font-family: Arial;
+	font-size: 18;
+	color: RGB(0, 150, 0);
+}
+
+a {
+	font-family: Arial;
+	font-size: 12;
+	color: RGB(0, 150, 0);
+}
+
+p {
+	font-family: Arial;
+	font-size: 12;
+	color: RGB(0, 150, 0);
+}

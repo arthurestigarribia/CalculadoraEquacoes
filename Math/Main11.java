@@ -133,7 +133,7 @@ public class Main11 {
 		ResultadoController calc11 = new ResultadoController();
 		
 		//Entra na calculadora
-		Spark.post("/Resultado", calc10, engine);
+		Spark.post("/Resultado", calc11, engine);
 		
 		//Entra no resultado
 		Spark.get("/Resultado", new TemplateViewRoute() {
