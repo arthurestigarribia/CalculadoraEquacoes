@@ -63,8 +63,6 @@ public class RegraDeTresController implements TemplateViewRoute {
 	private static boolean ehUmNumero (QueryParamsMap a) {
 		char[] numero2 = a.value().toCharArray();
 		
-		System.out.println(a.value());
-		
 		if (numero2[0] < 48 || numero2[0] > 57 || numero2[0] != 50) return false;
 		
 		for (int i = 1; i < numero2.length; i++) {

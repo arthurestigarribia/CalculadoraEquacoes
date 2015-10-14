@@ -11,26 +11,26 @@ input:focus {
 }
 
 h1 {
-	font-family: Arial;
-	font-size: 18;
+	font-family: Segoe UI Light;
+	font-size: 16;
 	background-color: RGB(0, 150, 0);
 	color: RGB(255, 255, 255);
 }
 
 h2 {
-	font-family: Arial;
-	font-size: 18;
+	font-family: Segoe UI Light;
+	font-size: 16;
 	color: RGB(0, 150, 0);
 }
 
 a {
-	font-family: Arial;
-	font-size: 12;
+	font-family: Segoe UI;
+	font-size: 9;
 	color: RGB(0, 150, 0);
 }
 
 p {
-	font-family: Arial;
-	font-size: 12;
+	font-family: Segoe UI;
+	font-size: 9;
 	color: RGB(0, 150, 0);
 }
