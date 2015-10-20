@@ -18,31 +18,25 @@
 	</p>
 	<form action = "/RegraDeTres" method = "post">
 		<p>
-		Equacao na forma a/b = c/d
+		Equacao na forma x/a = b/c
 		</p>
 		
 		<p>
 		Termo a:
 		</p>
-		<input type="text" name="PrimeiroNumero">
+		<input type="number" name="PrimeiroNumero" required autofocus>
 		<br>
 		
 		<p>
 		Termo b:
 		</p>
-		<input type="text" name="SegundoNumero">
+		<input type="number" name="SegundoNumero" required>
 		<br>
 		
 		<p>
 		Termo c:
 		</p>
-		<input type="text" name="TerceiroNumero">
-		<br>
-		
-		<p>
-		Termo d:
-		</p>
-		<input type="text" name="QuartoNumero">
+		<input type="number" name="TerceiroNumero" required>
 		<br>
 		
 		<input type="submit" value="Calcular">

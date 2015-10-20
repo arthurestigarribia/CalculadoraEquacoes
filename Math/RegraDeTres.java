@@ -2,34 +2,14 @@ package Math;
 
 public class RegraDeTres {
 	private double resultado;
-	private String incognita, str;
+	private String str;
 	
-	public RegraDeTres (String a, double b, double c, double d) {	
-		this.resultado = (b * c)/ d;
-		this.incognita = a;
+	public RegraDeTres (double a, double b, double c) {	
+		if (a == 0 || c == 0) throw new NaoExistemRaizesException("Os denomiandores nao podem ser iguais a zero.");
 		
-		str = a + "/" + b + " = " + c + "/" + d;
-	}
-	
-	public RegraDeTres (double a, String b, double c, double d) {
-		this.resultado = (a * d)/ c;
-		this.incognita = b;
+		this.resultado = (a * b)/ c;
 		
-		str = a + "/" + b + " = " + c + "/" + d;
-	}
-	
-	public RegraDeTres (double a, double b, String c, double d) {
-		this.resultado = (a * d)/ b;
-		this.incognita = c;
-		
-		str = a + "/" + b + " = " + c + "/" + d;
-	}
-	
-	public RegraDeTres (double a, double b, double c, String d) {
-		this.resultado = (b * c)/ a;
-		this.incognita = d;
-		
-		str = a + "/" + b + " = " + c + "/" + d;
+		str = "x /" + a + " = " + b + "/" + c;
 	}
 	
 	public String toString () {
@@ -37,6 +17,6 @@ public class RegraDeTres {
 	}
 	
 	public String resolveEquacao () {
-		return incognita + " = " + resultado;
+		return "x = " + resultado;
 	}
 }

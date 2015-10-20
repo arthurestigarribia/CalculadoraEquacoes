@@ -4,7 +4,7 @@ import controller.*;
 import spark.*;
 import spark.template.mustache.MustacheTemplateEngine;
 
-public class Main {
+public class MainTeste {
 	public static void main(String[] args) {
 		MustacheTemplateEngine engine = new MustacheTemplateEngine("views");
 		Spark.staticFileLocation("/pub");
@@ -13,23 +13,10 @@ public class Main {
 		
 		Spark.get("/CalculadoraEquacoes", paginaInicial, engine);
 		
-		PitagorasCatetoController calc1 = new PitagorasCatetoController();
+		EquacaoPrimeiroGrauController calc1 = new EquacaoPrimeiroGrauController();
 		
 		//Entra na calculadora
-		Spark.post("/PitagorasCateto", calc1, engine);
-		
-		//Entra no resultado
-		Spark.get("/PitagorasCateto", new TemplateViewRoute() {
-			@Override
-			public ModelAndView handle(Request req, Response resp) {
-				return new ModelAndView(null, "PitagorasCateto.html");
-			}
-		}, engine);
-		
-		EquacaoPrimeiroGrauController calc2 = new EquacaoPrimeiroGrauController();
-		
-		//Entra na calculadora
-		Spark.post("/EquacaoPrimeiroGrau", calc2, engine);
+		Spark.post("/EquacaoPrimeiroGrau", calc1, engine);
 		
 		//Entra no resultado
 		Spark.get("/EquacaoPrimeiroGrau", new TemplateViewRoute() {
@@ -39,10 +26,10 @@ public class Main {
 			}
 		}, engine);
 		
-		EquacaoSegundoGrauController calc4 = new EquacaoSegundoGrauController();
+		EquacaoSegundoGrauController calc2 = new EquacaoSegundoGrauController();
 		
 		//Entra na calculadora
-		Spark.post("/EquacaoSegundoGrau", calc4, engine);
+		Spark.post("/EquacaoSegundoGrau", calc2, engine);
 		
 		//Entra no resultado
 		Spark.get("/EquacaoSegundoGrau", new TemplateViewRoute() {
@@ -52,10 +39,10 @@ public class Main {
 			}
 		}, engine);
 		
-		ExponencialController calc5 = new ExponencialController();
+		ExponencialController calc3 = new ExponencialController();
 		
 		//Entra na calculadora
-		Spark.post("/Exponencial", calc5, engine);
+		Spark.post("/Exponencial", calc3, engine);
 		
 		//Entra no resultado
 		Spark.get("/Exponencial", new TemplateViewRoute() {
@@ -65,10 +52,10 @@ public class Main {
 			}
 		}, engine);
 		
-		RegraDeTresController calc6 = new RegraDeTresController();
+		RegraDeTresController calc4 = new RegraDeTresController();
 		
 		//Entra na calculadora
-		Spark.post("/RegraDeTres", calc6, engine);
+		Spark.post("/RegraDeTres", calc4, engine);
 		
 		//Entra no resultado
 		Spark.get("/RegraDeTres", new TemplateViewRoute() {
@@ -78,10 +65,10 @@ public class Main {
 			}
 		}, engine);
 		
-		LogaritmoController calc7 = new LogaritmoController();
+		LogaritmoController calc5 = new LogaritmoController();
 		
 		//Entra na calculadora
-		Spark.post("/Logaritmo", calc7, engine);
+		Spark.post("/Logaritmo", calc5, engine);
 		
 		//Entra no resultado
 		Spark.get("/Logaritmo", new TemplateViewRoute() {
@@ -91,10 +78,10 @@ public class Main {
 			}
 		}, engine);
 		
-		EquacaoBaseController calc8 = new EquacaoBaseController();
+		EquacaoBaseController calc6 = new EquacaoBaseController();
 		
 		//Entra na calculadora
-		Spark.post("/EquacaoBase", calc8, engine);
+		Spark.post("/EquacaoBase", calc6, engine);
 		
 		//Entra no resultado
 		Spark.get("/EquacaoBase", new TemplateViewRoute() {
@@ -104,10 +91,10 @@ public class Main {
 			}
 		}, engine);
 		
-		PitagorasHipotenusaController calc9 = new PitagorasHipotenusaController();
+		PitagorasHipotenusaController calc7 = new PitagorasHipotenusaController();
 		
 		//Entra na calculadora
-		Spark.post("/PitagorasHipotenusa", calc9, engine);
+		Spark.post("/PitagorasHipotenusa", calc7, engine);
 		
 		//Entra no resultado
 		Spark.get("/PitagorasHipotenusa", new TemplateViewRoute() {
@@ -117,10 +104,23 @@ public class Main {
 			}
 		}, engine);
 		
-		NaoExistemRaizesController calc10 = new NaoExistemRaizesController();
+		PitagorasCatetoController calc8 = new PitagorasCatetoController();
 		
 		//Entra na calculadora
-		Spark.post("/NaoExistemRaizes", calc10, engine);
+		Spark.post("/PitagorasCateto", calc8, engine);
+		
+		//Entra no resultado
+		Spark.get("/PitagorasCateto", new TemplateViewRoute() {
+			@Override
+			public ModelAndView handle(Request req, Response resp) {
+				return new ModelAndView(null, "PitagorasCateto.html");
+			}
+		}, engine);
+		
+		NaoExistemRaizesController erro = new NaoExistemRaizesController();
+		
+		//Entra na calculadora
+		Spark.post("/NaoExistemRaizes", erro, engine);
 		
 		//Entra no resultado
 		Spark.get("/NaoExistemRaizes", new TemplateViewRoute() {
@@ -130,10 +130,10 @@ public class Main {
 			}
 		}, engine);
 		
-		ResultadoController calc11 = new ResultadoController();
+		ResultadoController resp = new ResultadoController();
 		
 		//Entra na calculadora
-		Spark.post("/Resultado", calc11, engine);
+		Spark.post("/Resultado", resp, engine);
 		
 		//Entra no resultado
 		Spark.get("/Resultado", new TemplateViewRoute() {
