@@ -19,6 +19,7 @@ public class RegraDeTresController implements TemplateViewRoute {
 		try {
 			HashMap mapa = new HashMap();
 			mapa.put("equacao", eq.toString());
+			mapa.put("passoAPasso", eq.passoAPasso());
 			mapa.put("resultado", eq.resolveEquacao());
 			
 			return new ModelAndView(mapa, "Resultado.html");

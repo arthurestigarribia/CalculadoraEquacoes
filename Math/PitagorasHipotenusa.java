@@ -1,6 +1,6 @@
 package Math;
 
-public class PitagorasHipotenusa {
+public class PitagorasHipotenusa implements IEquacao {
 	private double hipotenusa;
 	private double catetoAdjacente;
 	private double catetoOposto;
@@ -18,5 +18,9 @@ public class PitagorasHipotenusa {
 	public String resolveEquacao () {
 		if ((catetoAdjacente * catetoAdjacente + catetoOposto * catetoOposto) < 0) throw new NaoExistemRaizesException("Nao existem raizes reais.");
 		return "x = " + hipotenusa;
+	}
+	
+	public String passoAPasso () {
+		return "x^2 = (" + catetoAdjacente + ")^2 + (" + catetoOposto + ")^2";
 	}
 }

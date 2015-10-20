@@ -14,10 +14,15 @@ public class EquacaoPrimeiroGrauController implements TemplateViewRoute {
 		
 		EquacaoPrimeiroGrau eq = new EquacaoPrimeiroGrau(a, b);
 		
-		HashMap mapa = new HashMap();
-		mapa.put("equacao", eq.toString());
-		mapa.put("resultado", eq.resolveEquacao());
-		
-		return new ModelAndView(mapa, "Resultado.html");
+		try {
+			HashMap mapa = new HashMap();
+			mapa.put("equacao", eq.toString());
+			mapa.put("passoAPasso", eq.passoAPasso());
+			mapa.put("resultado", eq.resolveEquacao());
+			
+			return new ModelAndView(mapa, "Resultado.html");
+		} catch (NaoExistemRaizesException e) {
+			return new ModelAndView(null, "NaoExistemRaizes.html");
+		}
 	}	
 }

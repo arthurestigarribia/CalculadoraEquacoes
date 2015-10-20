@@ -5,6 +5,9 @@ public class Exponencial implements IEquacao {
 	private double resultado;
 	
 	public Exponencial (double base, double resultado) {
+		if (base < 0 || base == 1 || resultado < 0) throw new NaoExistemRaizesException
+			("O logaritmando e a base devem ser positivos e a base diferente de 1.");
+		
 		this.base = base;
 		this.resultado = resultado;
 	}
@@ -19,5 +22,10 @@ public class Exponencial implements IEquacao {
 		Logaritmo log = new Logaritmo(base, resultado); 
 		
 		return log.resolveEquacao();
+	}
+
+	@Override
+	public String passoAPasso() {
+		return "x = log(" + resultado + ")/log(" + base + ")";
 	}
 }

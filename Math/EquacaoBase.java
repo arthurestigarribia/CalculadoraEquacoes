@@ -23,4 +23,9 @@ public class EquacaoBase implements IEquacao {
 	public String toString() {
 		return "x ^ " + expoente + " = " + potencia;
 	}
+
+	@Override
+	public String passoAPasso() {
+		return "x = (" + potencia + ")^(1/" + expoente + ")";
+	}
 }

@@ -51,4 +51,9 @@ public class EquacaoSegundoGrau implements IEquacao {
 		
 		return "x1 = " + resp[0] + " | x2 = " + resp[1];
 	}
+	
+	public String passoAPasso () {
+		return "x1 = -(" + b + ") + sqrt(" + b + "^2 - 4 * " + a + " * " + c + ")/(2 * " + a 
+				+ ") | x2 = -(" + b + ") - sqrt(" + b + "^2 - 4 * " + a + " * " + c + ")/(2 * " + a + ")";
+	}
 }

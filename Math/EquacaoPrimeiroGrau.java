@@ -26,4 +26,8 @@ public class EquacaoPrimeiroGrau implements IEquacao {
 		if (a == 0) throw new DivisaoPorZeroException("Impossivel dividir por zero.");
 		return "x = " + -b/a;
 	}
+	
+	public String passoAPasso () {
+		return "x = -(" + b + ")/(" + a + ")";
+	}
 }
