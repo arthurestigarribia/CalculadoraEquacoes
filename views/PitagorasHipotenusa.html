@@ -7,12 +7,18 @@
 	<link rel="stylesheet" type="text/css" href="estilo.css">
 </head>
 <body>
+	<nav id="menu">
+		<ul>
+			<li><a href="/CalculadoraEquacoes">Calculadora de Equações do Arthur</a></li>
+			<li><a href="/CalculadoraEquacoes">Equações</a></li>
+			<li><a href="/CalculadoraBasica">Operações Básicas</a></li>
+			<li><a href="/links">Links</a></li>
+			<li><a href="/contato">Contato</a></li>
+		</ul>
+	</nav>
 	<h1>
-		Calculadora de Equações do Arthur
-	</h1>
-	<h2>
 		Hipotenusa de Pitágoras
-	</h2>
+	</h1>
 	<p>
 		Digite dois numeros positivos (inteiro ou decimal):
 	</p>
@@ -24,13 +30,13 @@
 		<p>
 		Termo a:
 		</p>
-		<input type="number" name="PrimeiroNumero">
+		<input type="number" name="PrimeiroNumero" autofocus required>
 		<br>
 		
 		<p>
 		Termo b:
 		</p>
-		<input type="number" name="SegundoNumero">
+		<input type="number" name="SegundoNumero" required>
 		<br>
 		
 		<input type="submit" value="Calcular">

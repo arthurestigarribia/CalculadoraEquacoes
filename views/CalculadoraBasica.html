@@ -17,15 +17,26 @@
 		</ul>
 	</nav>
 	<h1>
-		Resultado da equação
+		Calculadora Básica
 	</h1>
 	<p>
-		{{equacao}}
-		<br>
-		{{passoAPasso}}
-		<br>
-		{{resultado}}
+		Digite dois numeros (inteiro ou decimal, positivo ou negativo):
 	</p>
+	<form action = "/CalculadoraBasica" method = "post">
+		<p>
+		Primeiro número:
+		</p>
+		<input type="number" name="PrimeiroNumero" required autofocus>
+		<br>
+		
+		<p>
+		Segundo número:
+		</p>
+		<input type="number" name="SegundoNumero" required>
+		<br>
+		
+		<input type="submit" value="Calcular">
+	</form>
 	
 	<a href="/CalculadoraEquacoes">Voltar para a página inicial</a>
 </body>

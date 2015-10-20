@@ -142,5 +142,56 @@ public class Main {
 				return new ModelAndView(null, "Resultado.html");
 			}
 		}, engine);
+		
+		CalculadoraBasicaController calcBasica1 = new CalculadoraBasicaController();
+		
+		//Entra na calculadora
+		Spark.post("/CalculadoraBasica", calcBasica1, engine);
+		
+		//Entra no resultado
+		Spark.get("/CalculadoraBasica", new TemplateViewRoute() {
+			@Override
+			public ModelAndView handle(Request req, Response resp) {
+				return new ModelAndView(null, "CalculadoraBasica.html");
+			}
+		}, engine);
+		
+		ResultadoBasicoController calcBasica2 = new ResultadoBasicoController();
+		//Entra na calculadora
+		Spark.post("/ResultadoBasico", calcBasica2, engine);
+		
+		//Entra no resultado
+		Spark.get("/ResultadoBasico", new TemplateViewRoute() {
+			@Override
+			public ModelAndView handle(Request req, Response resp) {
+				return new ModelAndView(null, "ResultadoBasico.html");
+			}
+		}, engine);
+		
+		LinksController links = new LinksController();
+		
+		//Entra na calculadora
+		Spark.post("/links", calcBasica2, engine);
+		
+		//Entra no resultado
+		Spark.get("/links", new TemplateViewRoute() {
+			@Override
+			public ModelAndView handle(Request req, Response resp) {
+				return new ModelAndView(null, "links.html");
+			}
+		}, engine);
+		
+		ContatoController contato = new ContatoController();
+		
+		//Entra na calculadora
+		Spark.post("/contato", calcBasica2, engine);
+		
+		//Entra no resultado
+		Spark.get("/contato", new TemplateViewRoute() {
+			@Override
+			public ModelAndView handle(Request req, Response resp) {
+				return new ModelAndView(null, "contato.html");
+			}
+		}, engine);
 	}
 }
