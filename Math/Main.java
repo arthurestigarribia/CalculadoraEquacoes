@@ -11,7 +11,11 @@ public class Main {
 		
 		HomeController paginaInicial = new HomeController();
 		
-		Spark.get("/CalculadoraEquacoes", paginaInicial, engine);
+		Spark.get("/index", paginaInicial, engine);
+		
+		CalculadoraEquacoesController equacoes = new CalculadoraEquacoesController();
+		
+		Spark.get("/CalculadoraEquacoes", equacoes, engine);
 		
 		PitagorasCatetoController calc1 = new PitagorasCatetoController();
 		

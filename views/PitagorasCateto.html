@@ -1,47 +1,73 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta charset="UTF-8">
-	<title>Calculadora de Equações do Arthur</title>
-	<link rel="stylesheet" type="text/css" href="estilo.css">
-</head>
-<body>
-	<nav id="menu">
-		<ul>
-			<li><a href="/CalculadoraEquacoes">Calculadora de Equações do Arthur</a></li>
-			<li><a href="/CalculadoraEquacoes">Equações</a></li>
-			<li><a href="/CalculadoraBasica">Operações Básicas</a></li>
-			<li><a href="/links">Links</a></li>
-			<li><a href="/contato">Contato</a></li>
-		</ul>
-	</nav>
-	<h1>
-		Cateto de Pitágoras
-	</h1>
-	<p>
-		Digite dois numeros positivos (inteiro ou decimal):
-	</p>
-	<form action = "/PitagorasCateto" method = "post">
-		<p>
-		Equacao na forma a^2 = x^2 + b^2
-		</p>
-		
-		<p>
-		Termo a:
-		</p>
-		<input type="number" name="PrimeiroNumero" autofocus required>
-		<br>
-		
-		<p>
-		Termo b:
-		</p>
-		<input type="number" name="SegundoNumero" required>
-		<br>
-		
-		<input type="submit" value="Calcular">
-	</form>
-	
-	<a href="/CalculadoraEquacoes">Voltar para a página inicial</a>
-</body>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta charset="UTF-8">
+		<title>Calculadora de Equações do Arthur</title>
+		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.amber-orange.min.css" /> 
+		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+	</head>
+	<body>
+		<!-- Always shows a header, even in smaller screens. -->
+		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+		  <header class="mdl-layout__header">
+		    <div class="mdl-layout__header-row">
+		      <!-- Title -->
+		      <span class="mdl-layout-title">Equações do Arthur</span>
+		      <!-- Add spacer, to align navigation to the right -->
+		      <div class="mdl-layout-spacer"></div>
+		      <!-- Navigation. We hide it in small screens. -->
+		      <nav class="mdl-navigation mdl-layout--large-screen-only">
+		     	<a class="mdl-navigation__link" href="/index">Home</a>
+		        <a class="mdl-navigation__link" href="/CalculadoraEquacoes">Equações</a>
+		        <a class="mdl-navigation__link" href="/CalculadoraBasica">Operações básicas</a>
+		        <a class="mdl-navigation__link" href="/links">Links</a>
+		        <a class="mdl-navigation__link" href="/contato">Contato</a>
+		      </nav>
+		    </div>
+		  </header>
+		  <div class="mdl-layout__drawer">
+		    <span class="mdl-layout-title">Equações do Arthur</span>
+		    <nav class="mdl-navigation">
+		     <a class="mdl-navigation__link" href="/index">Home</a>
+		        <a class="mdl-navigation__link" href="/CalculadoraEquacoes">Equações</a>
+		        <a class="mdl-navigation__link" href="/CalculadoraBasica">Operações básicas</a>
+		        <a class="mdl-navigation__link" href="/links">Links</a>
+		        <a class="mdl-navigation__link" href="/contato">Contato</a>
+		    </nav>
+		  </div>
+		  <main class="mdl-layout__content">
+		    <div class="page-content">
+				<h1>
+					Cateto de Pitágoras
+				</h1>
+				<p>
+					Digite dois numeros (inteiro ou decimal, positivo ou negativo):
+				</p>
+				<form action = "/PitagorasCateto" method = "post">
+					<p>
+					Equação na forma a^2 = x^2 + b^2
+					</p>
+					
+					<p>
+					Termo a:
+					</p>
+					<input type="number" name="PrimeiroNumero" required autofocus>
+					<br>
+					
+					<p>
+					Termo b:
+					</p>
+					<input type="number" name="SegundoNumero" required>
+					<br>
+					
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" action="/Resultado">
+						Calcular
+					</button>
+				</form>
+		    </div>
+		  </main>
+		</div>
+	</body>
 </html>
