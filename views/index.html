@@ -7,142 +7,82 @@
 		<link rel="stylesheet" href="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.amber-orange.min.css" /> 
 		<script src="https://storage.googleapis.com/code.getmdl.io/1.0.5/material.min.js"></script>
 		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"> 
+		<style>
+			.demo-card-square.mdl-card {
+				width: 320px;
+				height: 320px;
+			}
+			.demo-card-square > .mdl-card__title {
+				color: #fff;
+				background: RGB(0, 100, 0);
+			}
+		</style>
 	</head>
 	<body>
 		<!-- Always shows a header, even in smaller screens. -->
 		<div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
-		  <header class="mdl-layout__header">
-		    <div class="mdl-layout__header-row">
-		      <!-- Title -->
-		      <span class="mdl-layout-title">Equações do Arthur</span>
-		      <!-- Add spacer, to align navigation to the right -->
-		      <div class="mdl-layout-spacer"></div>
-		      <!-- Navigation. We hide it in small screens. -->
-		      <nav class="mdl-navigation mdl-layout--large-screen-only">
-		     	<a class="mdl-navigation__link" href="/index">Home</a>
-		        <a class="mdl-navigation__link" href="/CalculadoraEquacoes">Equações</a>
-		        <a class="mdl-navigation__link" href="/CalculadoraBasica">Operações básicas</a>
-		        <a class="mdl-navigation__link" href="/links">Links</a>
-		        <a class="mdl-navigation__link" href="/contato">Contato</a>
-		      </nav>
-		    </div>
+			<header class="mdl-layout__header">
+		    	<div class="mdl-layout__header-row">
+			    	<!-- Title -->
+			    	<span class="mdl-layout-title">Equações do Arthur</span>
+			    	<!-- Add spacer, to align navigation to the right -->
+			      	<div class="mdl-layout-spacer"></div>
+			      	<!-- Navigation. We hide it in small screens. -->
+			      	<nav class="mdl-navigation mdl-layout--large-screen-only">
+			    		<a class="mdl-navigation__link" href="/index">Home</a>
+			    		<a class="mdl-navigation__link" href="/CalculadoraEquacoes">Equações</a>
+			        	<a class="mdl-navigation__link" href="/CalculadoraBasica">Operações básicas</a>
+			        	<a class="mdl-navigation__link" href="/links">Links</a>
+			        	<a class="mdl-navigation__link" href="/contato">Contato</a>
+			    	</nav>
+		  		</div>
 		  </header>
 		  <div class="mdl-layout__drawer">
-		    <span class="mdl-layout-title">Equações do Arthur</span>
-		    <nav class="mdl-navigation">
-		     <a class="mdl-navigation__link" href="/index">Home</a>
-		        <a class="mdl-navigation__link" href="/CalculadoraEquacoes">Equações</a>
-		        <a class="mdl-navigation__link" href="/CalculadoraBasica">Operações básicas</a>
-		        <a class="mdl-navigation__link" href="/links">Links</a>
-		        <a class="mdl-navigation__link" href="/contato">Contato</a>
-		    </nav>
+			    <span class="mdl-layout-title">Equações do Arthur</span>
+		    	<nav class="mdl-navigation">
+		     	<a class="mdl-navigation__link" href="/index">Home</a>
+		        	<a class="mdl-navigation__link" href="/CalculadoraEquacoes">Equações</a>
+		        	<a class="mdl-navigation__link" href="/CalculadoraBasica">Operações básicas</a>
+		        	<a class="mdl-navigation__link" href="/links">Links</a>
+		        	<a class="mdl-navigation__link" href="/contato">Contato</a>
+		    	</nav>
 		  </div>
 		  
-		  <main class="mdl-layout__content">
-		    <div class="page-content">
-		    	<h1>
-					Página Inicial
-				</h1>
-				<!-- Wide card with share menu button -->
-				<style>
-				.demo-card-wide.mdl-card {
-				  width: 512px;
-				}
-				.demo-card-wide > .mdl-card__title {
-				  color: #fff;
-				  height: 176px;
-				  background: url('C:\Users\Arthur Estigarribia\OneDrive\Curso Técnico\2º ano - DBO\Projeto\Project\bin\pub\I Love Matemática.jpg') center / cover;
-				}
-				.demo-card-wide > .mdl-card__menu {
-				  color: #fff;
-				}
-				</style>
-				<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-				  <div class="mdl-card__title">
-				    <h2 class="mdl-card__title-text">Calculadora básica</h2>
-				  </div>
-				  <div class="mdl-card__supporting-text">
-					    Bem-vindo à calculadora do Arthur! Você pode realizar as quatro operações básicas de uma só vez!
-				  </div>
-				  <div class="mdl-card__actions mdl-card--border">
-				    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/CalculadoraBasica">
-				      	Calcular
-				    </a>
-				  </div>
-				  <div class="mdl-card__menu">
-				    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-				      <i class="material-icons">share</i>
-				    </button>
-				  </div>
-				</div>
-				
-				<!-- Wide card with share menu button -->
-				<style>
-				.demo-card-wide.mdl-card {
-				  width: 512px;
-				}
-				.demo-card-wide > .mdl-card__title {
-				  color: #fff;
-				  height: 176px;
-				  background: url('C:\Users\Arthur Estigarribia\OneDrive\Curso Técnico\2º ano - DBO\Projeto\Project\bin\pub\I Love Matemática.jpg') center / cover;
-				}
-				.demo-card-wide > .mdl-card__menu {
-				  color: #fff;
-				}
-				</style>
-				<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-				  <div class="mdl-card__title">
-				    <h2 class="mdl-card__title-text">Calculadora de Equações</h2>
-				  </div>
-				  <div class="mdl-card__supporting-text">
-					   	Aqui, você também calcula equações de tipos variados, inclusive regras de três e equações do 2º grau.
-				  </div>
-				  <div class="mdl-card__actions mdl-card--border">
-				    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/CalculadoraEquacoes">
-				      	Calcular
-				    </a>
-				  </div>
-				  <div class="mdl-card__menu">
-				    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-				      <i class="material-icons">share</i>
-				    </button>
-				  </div>
-				</div>
-				
-				<!-- Wide card with share menu button -->
-				<style>
-				.demo-card-wide.mdl-card {
-				  width: 512px;
-				}
-				.demo-card-wide > .mdl-card__title {
-				  color: #fff;
-				  height: 176px;
-				  background: url('C:\Users\Arthur Estigarribia\OneDrive\Curso Técnico\2º ano - DBO\Projeto\Project\bin\pub\I Love Matemática.jpg') center / cover;
-				}
-				.demo-card-wide > .mdl-card__menu {
-				  color: #fff;
-				}
-				</style>
-				<div class="demo-card-wide mdl-card mdl-shadow--2dp">
-				  <div class="mdl-card__title">
-				    <h2 class="mdl-card__title-text">Você tem um leitor de PDF?</h2>
-				  </div>
-				  <div class="mdl-card__supporting-text">
-					    Então leia o seguinte arquivo gratuitamente!
-				  </div>
-				  <div class="mdl-card__actions mdl-card--border">
-				    <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect" href="/Fórmulas de Matemática e Física.pdf">
-				      	Ler
-				    </a>
-				  </div>
-				  <div class="mdl-card__menu">
-				    <button class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect">
-				      <i class="material-icons">read</i>
-				    </button>
-				  </div>
-				</div>
-		    </div>
-		  </main>
+			<main class="mdl-layout__content">
+				<div class="page-content">
+			    	<h1>
+						Página Inicial
+					</h1>
+					
+					<div class="demo-card-square mdl-card mdl-shadow--2dp">
+						<div class="mdl-card__title mdl-card--expand">
+							<h2 class="mdl-card__title-text">Calculadora Básica</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							Calcule as quatro operações básicas.
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a href="/CalculadoraBasica" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+								Calcular
+							</a>
+						</div>
+					</div>
+					<br>
+					<div class="demo-card-square mdl-card mdl-shadow--2dp">
+						<div class="mdl-card__title mdl-card--expand">
+							<h2 class="mdl-card__title-text">Calculadora de Equações</h2>
+						</div>
+						<div class="mdl-card__supporting-text">
+							Calcule diversos tipos de equações, tais como equações do 2º grau e regras de três.
+						</div>
+						<div class="mdl-card__actions mdl-card--border">
+							<a href="/CalculadoraEquacoes" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+								Calcular
+							</a>
+						</div>
+					</div>
+			  	</div>
+			</main>
 		</div>
 	</body>
 </html>

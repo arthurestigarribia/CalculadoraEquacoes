@@ -42,25 +42,32 @@
 		   		<h1>
 					Calculadora Básica
 				</h1>
+				<h4>
+					Some, subtraia, multiplique e divida!
+				</h4>
 				<p>
 					Digite dois numeros (inteiro ou decimal, positivo ou negativo):
 				</p>
-				<form action = "/CalculadoraBasica" method = "post">
-					<p>
-					Primeiro número:
-					</p>
-					<input type="number" name="PrimeiroNumero" required autofocus>
+				
+				<form action="/CalculadoraBasica" method="post">
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" name="PrimeiroNumero" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
+						<label class="mdl-textfield__label" for="sample2">Digite um número...</label>
+						<span class="mdl-textfield__error">Isso não é número!</span>
+					</div>
 					<br>
-					
-					<p>
-					Segundo número:
-					</p>
-					<input type="number" name="SegundoNumero" required>
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" name="SegundoNumero" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
+						<label class="mdl-textfield__label" for="sample2">Digite um número...</label>
+						<span class="mdl-textfield__error">Isso náo é número!</span>
+					</div>
 					<br>
-					
-					<input type="submit" value="Calcular">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" action="/ResultadoBasico">
+						Calcular
+					</button>
 				</form>
-				<a href="/Fórmulas de Matemática e Física.pdf">Arquivo PDF com fórmulas de Matemática e Física</a>
+				<br>
+				<a href="/Fórmulas de Matemática e Física.pdf">Confira também o nosso arquivo PDF com fórmulas de Matemática e Física</a>
 		    </div>
 		  </main>
 		</div>
