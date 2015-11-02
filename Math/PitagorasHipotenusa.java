@@ -1,4 +1,4 @@
-package Math;
+package math;
 
 public class PitagorasHipotenusa implements IEquacao {
 	private double hipotenusa;

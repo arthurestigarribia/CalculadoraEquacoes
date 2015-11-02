@@ -1,4 +1,4 @@
-package Math;
+package math;
 
 public class CalculadoraBasica {
 	private double a, b;

@@ -1,4 +1,4 @@
-package Math;
+package math;
 
 public class EquacaoBase implements IEquacao {
 	private double expoente;

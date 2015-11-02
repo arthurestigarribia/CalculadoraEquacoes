@@ -2,7 +2,7 @@ package controller;
 
 import java.util.HashMap;
 
-import Math.*;
+import math.*;
 import spark.*;
 
 public class EquacaoPrimeiroGrauController implements TemplateViewRoute {

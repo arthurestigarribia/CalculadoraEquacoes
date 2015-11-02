@@ -2,7 +2,7 @@ package controller;
 
 import java.util.*;
 
-import Math.*;
+import math.*;
 import spark.*;
 
 public class ExponencialController implements TemplateViewRoute {

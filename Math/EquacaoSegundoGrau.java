@@ -1,4 +1,4 @@
-package Math;
+package math;
 
 public class EquacaoSegundoGrau implements IEquacao {
 	private double a;

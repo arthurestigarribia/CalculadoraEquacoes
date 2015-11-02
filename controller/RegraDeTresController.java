@@ -2,9 +2,9 @@ package controller;
 
 import java.util.HashMap;
 
-import Math.NaoExistemRaizesException;
-import Math.PitagorasCateto;
-import Math.RegraDeTres;
+import math.NaoExistemRaizesException;
+import math.PitagorasCateto;
+import math.RegraDeTres;
 import spark.*;
 
 public class RegraDeTresController implements TemplateViewRoute {

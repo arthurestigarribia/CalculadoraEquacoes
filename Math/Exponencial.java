@@ -1,4 +1,4 @@
-package Math;
+package math;
 
 public class Exponencial implements IEquacao {
 	private double base;

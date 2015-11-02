@@ -1,7 +1,8 @@
 package controller;
 
 import java.util.*;
-import Math.*;
+
+import math.*;
 import spark.*;
 
 public class EquacaoBaseController implements TemplateViewRoute {

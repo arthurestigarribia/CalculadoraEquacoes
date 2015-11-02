@@ -2,8 +2,8 @@ package controller;
 
 import java.util.HashMap;
 
-import Math.Logaritmo;
-import Math.NaoExistemRaizesException;
+import math.Logaritmo;
+import math.NaoExistemRaizesException;
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;

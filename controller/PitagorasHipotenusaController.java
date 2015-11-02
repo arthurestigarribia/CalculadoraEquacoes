@@ -2,10 +2,10 @@ package controller;
 
 import java.util.HashMap;
 
-import Math.Logaritmo;
-import Math.NaoExistemRaizesException;
-import Math.PitagorasCateto;
-import Math.PitagorasHipotenusa;
+import math.Logaritmo;
+import math.NaoExistemRaizesException;
+import math.PitagorasCateto;
+import math.PitagorasHipotenusa;
 import spark.ModelAndView;
 import spark.Request;
 import spark.Response;

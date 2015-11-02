@@ -1,4 +1,4 @@
-package Math;
+package math;
 
 public class RegraDeTres implements IEquacao {
 	private double a, b, c, resultado;

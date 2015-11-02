@@ -1,4 +1,4 @@
-package Math;
+package math;
 
 public class Logaritmo implements IEquacao {
 	private double base;

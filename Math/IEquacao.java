@@ -1,4 +1,4 @@
-package Math;
+package math;
 
 /**
  * @author Arthur Aguiar Estigarribia
