@@ -8,14 +8,6 @@ public class EquacaoPrimeiroGrau implements IEquacao {
 		this.a = a;
 		this.b = b;
 	}
-
-	public double getA() {
-		return a;
-	}
-
-	public double getB() {
-		return b;
-	}
 	
 	public String toString () {
 		if (b >= 0) return a + "x + " + b + " = 0";
@@ -23,8 +15,8 @@ public class EquacaoPrimeiroGrau implements IEquacao {
 	}
 	
 	public String resolveEquacao () {
-		if (a == 0) throw new DivisaoPorZeroException("Impossivel dividir por zero.");
-		return "x = " + -b/a;
+		if (b == 0) throw new DivisaoPorZeroException("Impossivel dividir por zero.");
+		return "x = " + Main.round(-b/a);
 	}
 	
 	public String passoAPasso () {

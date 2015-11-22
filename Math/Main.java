@@ -175,7 +175,7 @@ public class Main {
 		LinksController links = new LinksController();
 		
 		//Entra na calculadora
-		Spark.post("/links", calcBasica2, engine);
+		Spark.post("/links", links, engine);
 		
 		//Entra no resultado
 		Spark.get("/links", new TemplateViewRoute() {
@@ -188,7 +188,7 @@ public class Main {
 		ContatoController contato = new ContatoController();
 		
 		//Entra na calculadora
-		Spark.post("/contato", calcBasica2, engine);
+		Spark.post("/contato", contato, engine);
 		
 		//Entra no resultado
 		Spark.get("/contato", new TemplateViewRoute() {
@@ -197,5 +197,11 @@ public class Main {
 				return new ModelAndView(null, "contato.html");
 			}
 		}, engine);
+	}
+	
+	public static double round (double num) {
+		int v = (int)(num * 100000000);
+		double arredondado = v / 100000000.0;
+		return arredondado;
 	}
 }

@@ -7,7 +7,7 @@ public class PitagorasCateto implements IEquacao {
 	
 	public PitagorasCateto (double h, double co) {
 		hipotenusa = h;
-		catetoAdjacente = Math.sqrt(h * h - co * co);
+		catetoAdjacente = Main.round(Math.sqrt(h * h - co * co));
 		catetoOposto = co;
 	}
 	

@@ -37,22 +37,28 @@
 		        <a class="mdl-navigation__link" href="/contato">Contato</a>
 		    </nav>
 		  </div>
-		  <main class="mdl-layout__content">
-		    <div class="page-content">
-				<h1>
-					Resultado
-				</h1>
-				<p>
-					{{soma}}
+			<main class="mdl-layout__content">
+			    <div class="page-content">
+					<h1>
+						Resultado
+					</h1>
+					<p>
+						{{soma}}
+						<br>
+						{{subtracao}}
+						<br>
+						{{multiplicacao}}
+						<br>
+						{{divisao}}
+					</p>
 					<br>
-					{{subtracao}}
-					<br>
-					{{multiplicacao}}
-					<br>
-					{{divisao}}
-				</p>
-		    </div>
-		  </main>
+					<form action="/CalculadoraBasica">
+						<button class="mdl-button mdl-js-button" action="/CalculadoraBasica">
+							Voltar para o cálculo
+						</button>
+					</form>
+			    </div>
+			</main>
 		</div>
 	</body>
 </html>

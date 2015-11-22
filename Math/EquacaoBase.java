@@ -13,7 +13,7 @@ public class EquacaoBase implements IEquacao {
 	
 	@Override
 	public String resolveEquacao() {
-		double resp = Math.pow(potencia, 1/expoente);
+		double resp = Main.round(Math.pow(potencia, 1/expoente));
 		
 		if (expoente % 2 == 0 && potencia >= 0) return "x1 = " + resp + " | x2 = " + -resp;
 		if (expoente % 2 == 0 && potencia < 0) return "Nao existem raizes reais.";
@@ -26,6 +26,6 @@ public class EquacaoBase implements IEquacao {
 
 	@Override
 	public String passoAPasso() {
-		return "x = (" + potencia + ")^(1/" + expoente + ")";
+		return "x1 = (" + potencia + ")^(1/" + expoente + ")";
 	}
 }

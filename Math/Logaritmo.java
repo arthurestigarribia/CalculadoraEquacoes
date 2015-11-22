@@ -11,7 +11,7 @@ public class Logaritmo implements IEquacao {
 		
 		this.base = base;
 		this.logaritmando = logaritmando;
-		this.logaritmo = Math.log(logaritmando)/Math.log(base);
+		this.logaritmo = Main.round(Math.log(logaritmando)/Math.log(base));
 	}
 	
 	public String resolveEquacao () {

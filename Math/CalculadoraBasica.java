@@ -9,18 +9,19 @@ public class CalculadoraBasica {
 	}
 	
 	public String soma () {
-		return a + " + " + b  + " = " + (a + b);
+		return a + " + " + b  + " = " + Main.round(a + b);
 	}
 	
 	public String subtracao () {
-		return a + " - " + b  + " = " + (a - b);
+		return a + " - " + b  + " = " + Main.round(a - b);
 	}
 	
 	public String multiplicacao () {
-		return a + " * " + b  + " = " + (a * b);
+		return a + " * " + b  + " = " + Main.round(a * b);
 	}
 	
 	public String divisao () {
-		return a + " / " + b  + " = " + (a / b);
+		if (b != 0) return a + " / " + b  + " = " + Main.round(a / b);
+		else return "Nao e possivel dividir por zero.";
 	}
 }

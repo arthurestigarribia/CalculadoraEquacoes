@@ -45,23 +45,22 @@
 				<p>
 					Digite dois numeros (inteiro ou decimal, positivo ou negativo):
 				</p>
-				<form action = "/EquacaoBase" method = "post">
-					<p>
+				<p>
 					Equação na forma x^a = b
-					</p>
-					
-					<p>
-					Termo a:
-					</p>
-					<input type="number" name="PrimeiroNumero" required autofocus>
+				</p>
+				<form action = "/EquacaoBase" method = "post">
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" name="PrimeiroNumero" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
+						<label class="mdl-textfield__label" for="sample2">Termo a</label>
+						<span class="mdl-textfield__error">Isso não é número!</span>
+					</div>
 					<br>
-					
-					<p>
-					Termo b:
-					</p>
-					<input type="number" name="SegundoNumero" required>
+					<div class="mdl-textfield mdl-js-textfield">
+						<input class="mdl-textfield__input" name="SegundoNumero" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
+						<label class="mdl-textfield__label" for="sample2">Termo b</label>
+						<span class="mdl-textfield__error">Isso náo é número!</span>
+					</div>
 					<br>
-					
 					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" action="/Resultado">
 						Calcular
 					</button>

@@ -4,13 +4,13 @@ public class RegraDeTres implements IEquacao {
 	private double a, b, c, resultado;
 	
 	public RegraDeTres (double a, double b, double c) {		
-		if (a == 0 || c == 0) throw new NaoExistemRaizesException("Os denomiandores nao podem ser iguais a zero.");
+		if (a == 0 || c == 0) throw new NaoExistemRaizesException("Os denominadores nao podem ser iguais a zero.");
 		
 		this.a = a;
 		this.b = b;
 		this.c = c;
 		
-		this.resultado = (a * b)/ c;
+		this.resultado = Main.round((a * b)/ c);
 	}
 	
 	public String toString () {

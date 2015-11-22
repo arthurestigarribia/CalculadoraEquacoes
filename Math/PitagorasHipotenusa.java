@@ -1,4 +1,5 @@
 package math;
+import java.text.DecimalFormat;
 
 public class PitagorasHipotenusa implements IEquacao {
 	private double hipotenusa;
@@ -6,7 +7,7 @@ public class PitagorasHipotenusa implements IEquacao {
 	private double catetoOposto;
 	
 	public PitagorasHipotenusa (double ca, double co) {
-		hipotenusa = Math.sqrt(ca * ca + co * co);
+		hipotenusa = Main.round(Math.sqrt(ca * ca + co * co));
 		catetoAdjacente = ca;
 		catetoOposto = co;
 	}

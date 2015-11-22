@@ -16,18 +16,6 @@ public class EquacaoSegundoGrau implements IEquacao {
 		this.b = b;
 	}
 	
-	public double getA() {
-		return a;
-	}
-	
-	public double getB() {
-		return b;
-	}
-
-	public double getC() {
-		return c;
-	}
-	
 	public String toString () {
 		if (b >= 0 && c >= 0) return a + "x^2 + " + b + "x + " + c + " = 0";
 		if (b >= 0 && c <= 0) return a + "x^2 + " + b + "x - " + -c + " = 0";
@@ -38,12 +26,12 @@ public class EquacaoSegundoGrau implements IEquacao {
 	public String resolveEquacao () {
 		if (a == 0) throw new DivisaoPorZeroException("O termo a nao pode ser igual a zero.");
 	
-		double d = Math.pow(b, 2) - 4*a*c;
+		double d = Math.round(Math.pow(b, 2) - 4*a*c);
 		double [] resp = new double[2];
 		
 		if (d >= 0) {	
-			resp[0] = (-b + Math.sqrt(d))/(2*a);
-			resp[1] = (-b - Math.sqrt(d))/(2*a);
+			resp[0] = Main.round((-b + Math.sqrt(d))/(2*a));
+			resp[1] = Main.round((-b - Math.sqrt(d))/(2*a));
 		} else {
 			throw new NaoExistemRaizesException("Nao existem raizes reais. ");
 		}
@@ -53,7 +41,7 @@ public class EquacaoSegundoGrau implements IEquacao {
 	}
 	
 	public String passoAPasso () {
-		return "x1 = -(" + b + ") + sqrt(" + b + "^2 - 4 * " + a + " * " + c + ")/(2 * " + a 
-				+ ") | x2 = -(" + b + ") - sqrt(" + b + "^2 - 4 * " + a + " * " + c + ")/(2 * " + a + ")";
+		return "x1 = [-(" + b + ") + sqrt(" + b + "^2 - 4 * " + a + " * " + c + ")]/(2 * " + a 
+				+ ") | x2 = [-(" + b + ") - sqrt(" + b + "^2 - 4 * " + a + " * " + c + ")]/(2 * " + a + ")";
 	}
 }
