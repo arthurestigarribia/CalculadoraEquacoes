@@ -1,5 +1,6 @@
 package math;
 
+import javax.swing.*;
 import controller.*;
 import spark.*;
 import spark.template.mustache.MustacheTemplateEngine;
@@ -200,8 +201,12 @@ public class Main {
 	}
 	
 	public static double round (double num) {
-		int v = (int)(num * 100000000);
+		long v = (long)(num * 100000000);
 		double arredondado = v / 100000000.0;
-		return arredondado;
+		if (arredondado >= Long.MAX_VALUE || arredondado <= Long.MIN_VALUE) {
+			JOptionPane.showMessageDialog(null, "Aqui há números que estão fora do intervalo entre -2^63 + 1 e 2^63 - 1. Por isso, exibimos 0 em algumas casas.");
+			return 0;
+		}
+		else return arredondado;
 	}
 }
