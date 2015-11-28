@@ -198,6 +198,32 @@ public class Main {
 				return new ModelAndView(null, "contato.html");
 			}
 		}, engine);
+		
+		TrigonometriaController trig1 = new TrigonometriaController();
+		
+		//Entra na calculadora
+		Spark.post("/Trigonometria", trig1, engine);
+		
+		//Entra no resultado
+		Spark.get("/Trigonometria", new TemplateViewRoute() {
+			@Override
+			public ModelAndView handle(Request req, Response resp) {
+				return new ModelAndView(null, "Trigonometria.html");
+			}
+		}, engine);
+		
+		ResultadoTrigonometriaController trig2 = new ResultadoTrigonometriaController();
+		
+		//Entra na calculadora
+		Spark.post("/ResultadoTrigonometria", trig2, engine);
+		
+		//Entra no resultado
+		Spark.get("/ResultadoTrigonometria", new TemplateViewRoute() {
+			@Override
+			public ModelAndView handle(Request req, Response resp) {
+				return new ModelAndView(null, "ResultadoTrigonometria.html");
+			}
+		}, engine);
 	}
 	
 	public static double round (double num) {

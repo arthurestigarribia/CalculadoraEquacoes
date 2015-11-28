@@ -41,32 +41,29 @@
 		  </div>
 		  <main class="mdl-layout__content">
 		    <div class="page-content">
-				<h1>
-					Hipotenusa de Pitágoras
+		   		<h1>
+					Trigonometria
 				</h1>
+				<h4>
+					Calcule ângulos trigonométricos de um ângulo em graus!
+				</h4>
 				<p>
-					Digite dois numeros (inteiro ou decimal, positivo ou negativo):
+					Digite um ângulo em graus:
 				</p>
-				<p>
-					Equação na forma x^2 = a^2 + b^2
-				</p>
-				<form action = "/PitagorasHipotenusa" method = "post">
+				
+				<form action="/Trigonometria" method="post">
 					<div class="mdl-textfield mdl-js-textfield">
 						<input class="mdl-textfield__input" name="PrimeiroNumero" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
-						<label class="mdl-textfield__label" for="sample2">Termo a</label>
-						<span class="mdl-textfield__error">Isso não é número!</span>
+						<label class="mdl-textfield__label" for="sample2">Digite um número...</label>
+						<span class="mdl-textfield__error">Isso não é número! Caso esteja digitando decimais, use ponto no lugar da vírgula.</span>
 					</div>
 					<br>
-					<div class="mdl-textfield mdl-js-textfield">
-						<input class="mdl-textfield__input" name="SegundoNumero" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="sample2" />
-						<label class="mdl-textfield__label" for="sample2">Termo b</label>
-						<span class="mdl-textfield__error">Isso náo é número!</span>
-					</div>
-					<br>
-					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" action="/Resultado">
+					<button class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored" action="/ResultadoTrigonometria">
 						Calcular
 					</button>
 				</form>
+				<br>
+				<a href="/Fórmulas de Matemática e Física.pdf" target="-blank">Confira também o nosso arquivo PDF com fórmulas de Matemática e Física</a>
 		    </div>
 		  </main>
 		</div>
